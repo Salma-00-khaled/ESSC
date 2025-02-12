@@ -1,0 +1,119 @@
+/* General Styles */
+.products-container {
+    width: 90%;
+    min-height: 100vh;
+    padding: 60px 5%;
+    background: #f4f4f4;
+    text-align: center;
+  }
+  
+  /* Title Styling */
+  .products-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #650606;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+  }
+  
+  /* Grid Layout for Products */
+  .products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 2fr));
+    gap: 20px;
+    justify-items: center;
+    align-items: center;
+  }
+  
+  /* Product Card - Flip Container */
+  .product-card {
+    perspective: 1000px;
+    width: 280px;
+    height: 350px;
+    position: relative;
+    cursor: pointer;
+  }
+  
+  /* Inner Card - Flipping Effect */
+  .product-card-inner {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+  }
+  
+  /* Flip the card when clicked */
+  .product-card.flipped .product-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  /* Front & Back Styles */
+  .product-card-front,
+  .product-card-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Front Side */
+  .product-card-front {
+    background: white;
+  }
+  
+  /* Image Styling */
+  .product-image {
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  /* Product Name */
+  .product-name {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #333;
+    margin-top: 10px;
+  }
+  
+  /* Back Side */
+  .product-card-back {
+    background: #ffffff;
+    color: rgb(87, 4, 4);
+    transform: rotateY(180deg);
+    padding: 20px;
+    text-align: center;
+    width: 80%;
+    height: 80%;
+  }
+  
+  /* Product Description */
+  .product-description {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  
+
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .products-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .products-grid {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+  

@@ -1,0 +1,161 @@
+/* 🔥 Contact Section */
+#contact {
+  width: 100vw; /* Full viewport width */
+  height: 120vh; /* Full viewport height */
+  padding: 0; /* Remove padding to avoid extra spacing */
+  background: url('./assets/sss.avif') no-repeat center center/cover; /* Ensures full coverage */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+
+/* 🔥 Dark Overlay for Readability */
+#contact::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+/* 🔥 Ensure Content is Above Overlay */
+#contact > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* 🔥 Contact Container - Made Smaller */
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 85%; /* Reduced width */
+  max-width: 900px; /* Made it more compact */
+  gap: 30px; /* Reduced spacing */
+  background: rgba(255, 255, 255, 0.12);
+  padding: 30px; /* Reduced padding */
+  border-radius: 12px;
+  box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(8px);
+  transition: transform 0.3s ease-in-out;
+}
+
+.contact-container:hover {
+  transform: scale(1.01);
+}
+
+/* 🔥 Contact Details */
+.contact-details {
+  flex: 1;
+  text-align: left;
+  font-size: medium; /* Smaller text */
+  color: white;
+}
+
+/* 🔥 Title */
+.contact-title {
+  font-size: 2.5rem; /* Smaller title */
+  font-weight: bold;
+  color: #ff3333;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+/* 🔥 Contact Info */
+.contact-info {
+  font-size: 1rem; /* Reduced text size */
+  font-weight: bold;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+/* 🔥 Icons */
+.icon-red {
+  color: #ff3333;
+  font-size: 1.3rem; /* Smaller icons */
+}
+
+.icon-black {
+  color: white;
+  font-size: 1.3rem;
+}
+.email-link {
+  color: #d32f2f;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+/* 🔥 Map Container - Smaller */
+.map-container {
+  flex: 1;
+  width: 400px; /* Reduced width */
+  height: 400px; /* Reduced height */
+  border-radius: 10px;
+  overflow: hidden;
+  border: 3px solid #ff4444;
+  box-shadow: 0px 5px 20px rgba(255, 0, 0, 0.5);
+  position: relative;
+}
+
+/* 🔥 Google Maps Link */
+.map-link {
+  position: absolute;
+  bottom: 160px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(45deg, #ff0000, #ff6666);
+  color: white;
+  font-size: 1.3rem; /* Smaller button */
+  font-weight: bold;
+  padding: 10px 18px; /* Smaller padding */
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease-in-out, background 0.3s;
+}
+
+.map-link:hover {
+  background: linear-gradient(45deg, #ff0000, #cc0000);
+  transform: translateX(-50%) scale(1.05);
+}
+
+/* 🔥 Responsive Adjustments */
+@media (max-width: 1024px) {
+  .contact-container {
+    flex-direction: column;
+    text-align: center;
+    width: 90%; /* Adjusted for medium screens */
+  }
+
+  .map-container {
+    width: 100%;
+    height: 350px;
+  }
+}
+
+@media (max-width: 768px) {
+  .map-container {
+    height: 300px;
+  }
+
+  .map-link {
+    font-size: 1rem;
+    padding: 8px 14px;
+  }
+
+  .contact-title {
+    font-size: 2rem;
+  }
+}

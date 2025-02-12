@@ -1,0 +1,81 @@
+/* Footer Styles */
+.footer {
+    background-color: #4c4b4b; /* Dark Background */
+    color: #e2e2d5; /* Light Text */
+    padding: 30px 0; /* Reduced padding for a more compact footer */
+    font-family: 'Arial', sans-serif;
+    width: 100%;
+    position: relative;
+    margin-top: 30px; /* Reduced margin */
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px; /* Adjusted width for better spacing */
+    margin: 0 auto;
+    padding: 0 20px; /* Less padding */
+}
+
+.footer-section {
+    flex: 1;
+    padding: 0 15px; /* Reduced padding between sections */
+}
+
+.footer-section h3 {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 8px;
+}
+
+.footer-section p,
+.footer-section a {
+    color: #e2e2d5;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+    font-size: 0.9rem; /* Slightly smaller text */
+}
+
+.footer-section a:hover {
+    color: red;
+    text-decoration: underline;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #bbb;
+    border-top: 1px solid #444;
+    padding-top: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .footer-container {
+        max-width: 100%;
+        padding: 0 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .footer-section {
+        padding-bottom: 15px;
+    }
+}
+
+/* Helpful Links Styling */
+.footer-section h3 {
+    font-size: 2rem; /* Enlarged size */
+    font-weight: bold;
+    color: #ffcc00; /* Changed to bright orange for emphasis */
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}

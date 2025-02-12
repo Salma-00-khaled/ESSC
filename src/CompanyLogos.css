@@ -1,0 +1,132 @@
+/* Default (medium) size */
+.company-logos-container {
+  width: 100%;
+  padding: 50px 0;
+ background: linear-gradient(to right, #2c2b2b, #380101);
+ 
+  text-align: center;
+  position: relative;
+  border-radius: 220px;
+}
+
+.company-logos-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.logos-wrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 80%;
+  margin: auto;
+}
+
+.logos-scroll-wrapper {
+  overflow-x: auto;
+  white-space: nowrap;
+  padding: 10px 0;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+  flex: 1;
+}
+
+.logos-scroll-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.logos-grid {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+
+.logo-card {
+  flex: 0 0 150px;
+  height: 150px;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.logo-card:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.logo-image {
+  max-width: 80%;
+  max-height: 80%;
+  object-fit: contain;
+}
+
+/* Scroll Buttons */
+.scroll-button {
+  position: absolute;
+  top: 30%;
+  background-color: rgba(12, 6, 6, 0.6);
+  color: rgb(255, 255, 255);
+  border: none;
+
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+ 
+}
+
+.scroll-button:hover {
+  background-color: rgba(72, 72, 72, 0.8);
+}
+
+.scroll-button.left {
+  left: -80px;
+}
+
+.scroll-button.right {
+  right: -80px;
+}
+
+/* SMALL SIZE */
+.company-logos-container.small {
+  padding: 30px 0;
+}
+
+.company-logos-container.small .logo-card {
+  flex: 0 0 100px;
+  height: 100px;
+}
+
+.company-logos-container.small .logo-image {
+  max-width: 30%;
+  max-height: 30%;
+}
+
+/* MEDIUM SIZE (Default) */
+.company-logos-container.medium {
+  padding: 50px 0;
+}
+
+/* LARGE SIZE */
+.company-logos-container.large {
+  padding: 70px 0;
+}
+
+.company-logos-container.large .logo-card {
+  flex: 0 0 200px;
+  height: 200px;
+}
+
+.company-logos-container.large .logo-image {
+  max-width: 90%;
+  max-height: 90%;
+}

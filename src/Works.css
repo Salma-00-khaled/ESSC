@@ -1,0 +1,134 @@
+/* General Styles */
+#Works {
+    width:90%;
+    min-height: 100vh;
+    padding: 100px 5%;
+    background: linear-gradient(to right, #2c2b2b, #380101); 
+  
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom-left-radius:220px ;
+    border-bottom-right-radius: 220px;
+    border-radius: 220px;
+}
+
+/* Center Content */
+.works-container {
+    max-width: 1200px; /* Center content */
+    width: 100%;
+}
+
+/* Heading Styles */
+#Works h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #f5f0f0; /* Light red for contrast */
+    text-align: center;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+}
+
+/* Underline Effect for Heading */
+#Works h2::after {
+    content: "";
+    display: block;
+    width: 120px;
+    height: 5px;
+    background: #ebe9e8;
+    margin: 10px auto;
+    border-radius: 5px;
+}
+
+/* Work Cards Grid */
+.works-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+    gap: 30px; /* Increased spacing between cards */
+    justify-content: center;
+    align-items: center;
+}
+
+/* Individual Work Card */
+.work-card {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+    width: 300px; /* Square shape */
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    margin-bottom: 20px; /* Additional spacing */
+}
+
+/* Hover Effect */
+.work-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Work Icon */
+.work-icon {
+    font-size: 4rem;
+    padding: 15px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Work Title */
+.work-card h3 {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #ffcc00;
+}
+
+/* Work Location */
+.work-card p {
+    font-size: 1.1rem;
+    color: #e2e2e2;
+    margin-top: 5px;
+}
+
+/* Description */
+.work-card .description {
+    font-size: 1rem;
+    color: #cbd5e1;
+    margin-top: 8px;
+}
+
+/* Hover Animation on Description */
+.work-card:hover .description {
+    color: white;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .works-grid {
+        grid-template-columns: repeat(2, 1fr); /* Adjust for smaller screens */
+        gap: 20px;
+    }
+
+    .work-card {
+        width: 100%;
+        height: auto;
+        padding: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .works-grid {
+        grid-template-columns: repeat(1, 1fr); /* Full width for small screens */
+    }
+}
