@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import "./CompanyLogos.css";
+import "./assets/CSS-Files/CompanyLogos.css"
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa"; // Importing icons
 
 const companyLogos = [
@@ -7,12 +7,29 @@ const companyLogos = [
   require("./assets/logos/krispy.png"),
   require("./assets/logos/Beshay-Steel-Egypt-76437-1649073836.webp"),
   require("./assets/logos/EZDK-Logo-1.jpg"),
-  require("./assets/logos/El-Garhy-Steel-Egypt-28725-1570977448-og.webp"),
-  require("./assets/logos/Ezz-Steel-Logo-1.jpg"),
-  require("./assets/logos/cropped-logo-high-quality.jpg"),
   require("./assets/logos/hilton-hotels-resorts-hilton-worldwide-logo-hilton-new-york-fashion-district-png-favpng-Ra5Vf3Xej9z7CkLPCTRQmjXyV.jpg"),
   require("./assets/logos/th (1).jpeg"),
   require("./assets/logos/th.jpeg"),
+  require("./assets/logos/OIP (5).jpeg"),
+  require("./assets/logos/OIP (10).jpeg"),
+  require("./assets/logos/OIP (11).jpeg"),
+  require("./assets/logos/OIP (12).jpeg"),
+  require("./assets/logos/OIP (2).jpeg"),
+  require("./assets/logos/OIP (3).jpeg"),
+  require("./assets/logos/OIP (4).jpeg"),
+  require("./assets/logos/OIP (6).jpeg"),
+  require("./assets/logos/OIP (7).jpeg"),
+  require("./assets/logos/OIP (8).jpeg"),
+  require("./assets/logos/OIP (9).jpeg"),
+  require("./assets/logos/OIP.jpeg"),
+  require("./assets/logos/R.jpeg"),
+  
+  require("./assets/logos/download (1).jpeg"),
+  require("./assets/logos/download (2).jpeg"),
+  require("./assets/logos/download.jpeg"),
+  
+  
+
 ];
 
 const CompanyLogos = ({ size = "medium" }) => {

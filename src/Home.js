@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useNavigate } from 'react-router-dom';
-import './About.css';
+import './assets/CSS-Files/Home.css';
 import Nav from './Nav';
 
 const sections = [
@@ -15,7 +15,7 @@ const sections = [
   { title: 'ESSC Egypt', description: 'Looking for full support during all project phases, including General Supplies, Safety Consultations, Environmental Consultancy, and Fire Fighting System Maintenance and Installation.' },
 ];
 
-const About = () => {
+const Home = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const navigate = useNavigate();
 
@@ -72,7 +72,7 @@ const About = () => {
         animate={{ opacity: 1, y: 0 }} 
         transition={{ delay: 0.5, duration: 1 }}
       >
-        {[{ icon: <FaFacebookF />, link: "https://www.facebook.com/profile.php?id=100077738543970" }, { icon: <FaWhatsapp />, link: "https://wa.me/+201280773379" }, { icon: <FaEnvelope />, link: "mailto:egyptessc@gmail.com" }, { icon: <FaPhone />, link: "tel:+201280773379" }].map((social, index) => (
+        {[{ icon: <FaFacebookF />, link: "https://www.facebook.com/profile.php?id=100077738543970" }, { icon: <FaWhatsapp />, link: "#" }, { icon: <FaEnvelope />, link: "mailto:egyptessc@gmail.com" }, { icon: <FaPhone />, link: "tel:#" }].map((social, index) => (
           <motion.a key={index} href={social.link} target="_blank" rel="noopener noreferrer" whileHover={{ scale: 1.2 }}>
             {social.icon}
           </motion.a>
@@ -170,4 +170,4 @@ const About = () => {
   );
 };
 
-export default memo(About);
+export default memo(Home);

@@ -1,6 +1,6 @@
 import React from "react";
 import { FaMapMarkerAlt, FaPhone, FaMobileAlt, FaEnvelope, FaMapPin, FaFacebookF, FaWhatsapp } from "react-icons/fa";
-import "./Contact.css";
+import "./assets/CSS-Files/Contact.css";
 import { motion } from 'framer-motion';
 
 const Contact = () => {
@@ -18,9 +18,7 @@ const Contact = () => {
           <p className="contact-info">
             <FaPhone className="icon-black" /> <strong>Telephone:</strong> 03 5037440
           </p>
-          <p className="contact-info">
-            <FaMobileAlt className="icon-black" /> <strong>Mobile:</strong> +20 106 949 4748
-          </p>
+         
           <p className="contact-info">
             <FaEnvelope className="icon-black" /> <strong>Email:</strong>
             <a href="mailto:egyptessc@gmail.com" className="email-link"> egyptessc@gmail.com</a>

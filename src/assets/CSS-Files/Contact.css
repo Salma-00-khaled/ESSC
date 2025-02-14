@@ -3,7 +3,7 @@
   width: 100vw; /* Full viewport width */
   height: 120vh; /* Full viewport height */
   padding: 0; /* Remove padding to avoid extra spacing */
-  background: url('./assets/sss.avif') no-repeat center center/cover; /* Ensures full coverage */
+  background: url('../sss.avif') no-repeat center center/cover; /* Ensures full coverage */
   display: flex;
   justify-content: center;
   align-items: center;

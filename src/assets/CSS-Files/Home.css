@@ -31,7 +31,7 @@
     justify-content: center;
     text-align: center;
     /* background: linear-gradient(135deg, #000000, #000000); */
-    background: url('./assets/sss.avif') no-repeat center center/cover;
+    background: url('../sss.avif') no-repeat center center/cover;
     color: rgb(255, 255, 255);
     font-size: 2rem;
   }

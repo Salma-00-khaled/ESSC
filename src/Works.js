@@ -2,8 +2,8 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { FaFireExtinguisher, FaBuilding, FaIndustry, FaShieldAlt, FaTools } from "react-icons/fa";
-import "./Works.css";
-import CompanyLogos from "./CompanyLogos";
+import "./assets/CSS-Files/Works.css";
+
 
 const worksData = [
   { title: "Fire Alarm System Installation", location: "Alexandria Port & Dekheila Port", description: "Installed fire alarm system (Hochiki America) and supplied safety equipment.", icon: <FaFireExtinguisher className="text-red-500 text-4xl" /> },

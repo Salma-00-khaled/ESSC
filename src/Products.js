@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import "./Products.css";
+import "./assets/CSS-Files/Products.css";
 import fireExtinguisher from "./assets/products/fireExtinguisher.jpg";
 import sprinkler from "./assets/products/Sprinkler.jpg";
 import sprinkler3 from "./assets/products/Sprinkler3.jpg";
