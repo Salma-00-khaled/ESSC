@@ -122,7 +122,7 @@ const Home = () => {
         animate={{ opacity: 1, y: 0 }} 
         transition={{ delay: 0.5, duration: 1 }}
       >
-        {[{ icon: <FaFacebookF />, link: "https://www.facebook.com/profile.php?id=100077738543970" }, { icon: <FaWhatsapp />, link: "https://wa.me/your-number" }, { icon: <FaEnvelope />, link: "mailto:egyptessc@gmail.com" }, { icon: <FaPhone />, link: "tel:+01280773379" }].map((social, index) => (
+        {[{ icon: <FaFacebookF />, link: "https://www.facebook.com/profile.php?id=100077738543970" }, { icon: <FaWhatsapp />, link: "https://wa.me/your-number" }, { icon: <FaEnvelope />, link: "mailto:egyptessc@gmail.com" }, { icon: <FaPhone />, link: "tel:#" }].map((social, index) => (
           <motion.a key={index} href={social.link} target="_blank" rel="noopener noreferrer" whileHover={{ scale: 1.2 }}>
             {social.icon}
           </motion.a>
