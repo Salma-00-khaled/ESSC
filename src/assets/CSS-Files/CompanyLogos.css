@@ -2,8 +2,8 @@
 .company-logos-container {
   width: 100%;
   padding: 50px 0;
- background: linear-gradient(to right, #2c2b2b, #380101);
- margin-top: 50px;
+  background: linear-gradient(to right, #2c2b2b, #380101);
+  margin-top: 50px;
   text-align: center;
   position: relative;
   border-radius: 220px;
@@ -24,6 +24,7 @@
   margin: auto;
 }
 
+/* Scrollable logos */
 .logos-scroll-wrapper {
   overflow-x: auto;
   white-space: nowrap;
@@ -43,6 +44,7 @@
   padding: 20px;
 }
 
+/* Logo Card */
 .logo-card {
   flex: 0 0 150px;
   height: 150px;
@@ -69,19 +71,18 @@
 /* Scroll Buttons */
 .scroll-button {
   position: absolute;
-  top: 30%;
+  top: 50%;
+  transform: translateY(-50%);
   background-color: rgba(12, 6, 6, 0.6);
-  color: rgb(255, 255, 255);
+  color: white;
   border: none;
-
-  width: 70px;
-  height: 70px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  
- 
+  transition: background 0.3s ease-in-out;
 }
 
 .scroll-button:hover {
@@ -89,11 +90,96 @@
 }
 
 .scroll-button.left {
-  left: -80px;
+  left: -60px;
 }
 
 .scroll-button.right {
-  right: -80px;
+  right: -60px;
+}
+
+/* RESPONSIVE DESIGN */
+
+/* Tablet View */
+@media (max-width: 1024px) {
+  .logos-wrapper {
+    width: 90%;
+  }
+
+  .logo-card {
+    flex: 0 0 120px;
+    height: 120px;
+  }
+
+  .company-logos-title {
+    font-size: 1.8rem;
+  }
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+  .company-logos-container {
+    border-radius: 100px;
+    padding: 30px 0;
+  }
+
+  .logos-wrapper {
+    width: 100%;
+  }
+
+  .logos-grid {
+    gap: 15px;
+    padding: 10px;
+  }
+
+  .logo-card {
+    flex: 0 0 100px;
+    height: 100px;
+  }
+
+  .logo-image {
+    max-width: 70%;
+    max-height: 70%;
+  }
+
+  /* Adjust scroll buttons */
+  .scroll-button {
+    width: 40px;
+    height: 40px;
+  }
+
+  .scroll-button.left {
+    left: -30px;
+  }
+
+  .scroll-button.right {
+    right: -30px;
+  }
+}
+
+/* Extra Small Screens */
+@media (max-width: 480px) {
+  .company-logos-container {
+    border-radius: 80px;
+    padding: 20px 0;
+  }
+
+  .company-logos-title {
+    font-size: 1.5rem;
+  }
+
+  .logo-card {
+    flex: 0 0 80px;
+    height: 80px;
+  }
+
+  .logo-image {
+    max-width: 60%;
+    max-height: 60%;
+  }
+
+  .scroll-button {
+    display: none; /* Hide scroll buttons on very small screens */
+  }
 }
 
 /* SMALL SIZE */
