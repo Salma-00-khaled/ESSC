@@ -1,19 +1,19 @@
 /* Default (medium) size */
 .company-logos-container {
   width: 100%;
-  padding: 50px 0;
+  padding: 5vw 0;
   background: linear-gradient(to right, #2c2b2b, #380101);
-  margin-top: 50px;
+  margin-top: 5vh;
   text-align: center;
   position: relative;
-  border-radius: 220px;
+  border-radius: 15vw;
 }
 
 .company-logos-title {
-  font-size: 2rem;
+  font-size: 2vw;
   font-weight: bold;
   color: #ffffff;
-  margin-bottom: 20px;
+  margin-bottom: 2vh;
 }
 
 .logos-wrapper {
@@ -28,7 +28,7 @@
 .logos-scroll-wrapper {
   overflow-x: auto;
   white-space: nowrap;
-  padding: 10px 0;
+  padding: 1vh 0;
   scrollbar-width: none;
   scroll-behavior: smooth;
   flex: 1;
@@ -40,19 +40,19 @@
 
 .logos-grid {
   display: flex;
-  gap: 20px;
-  padding: 20px;
+  gap:  2vw;
+  padding: 2vh;
 }
 
 /* Logo Card */
 .logo-card {
-  flex: 0 0 150px;
-  height: 150px;
+  flex: 0 0 10vw;
+  height: 10vw;
   background: white;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 20px;
+  border-radius: 2vw;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
@@ -76,8 +76,8 @@
   background-color: rgba(12, 6, 6, 0.6);
   color: white;
   border: none;
-  width: 50px;
-  height: 50px;
+  width: 4vw;
+  height: 4vw;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -90,11 +90,11 @@
 }
 
 .scroll-button.left {
-  left: -60px;
+  left:-4vw;
 }
 
 .scroll-button.right {
-  right: -60px;
+  right: -4vw;
 }
 
 /* RESPONSIVE DESIGN */
@@ -107,19 +107,19 @@
 
   .logo-card {
     flex: 0 0 120px;
-    height: 120px;
+    height:12vw;
   }
 
   .company-logos-title {
-    font-size: 1.8rem;
+    font-size: 2.5vw;
   }
 }
 
 /* Mobile View */
 @media (max-width: 768px) {
   .company-logos-container {
-    border-radius: 100px;
-    padding: 30px 0;
+    border-radius:  10vw;
+    padding: 4vh 0;
   }
 
   .logos-wrapper {
@@ -127,13 +127,13 @@
   }
 
   .logos-grid {
-    gap: 15px;
-    padding: 10px;
+    gap: 3vw;
+    padding: 2vh;
   }
 
   .logo-card {
-    flex: 0 0 100px;
-    height: 100px;
+    flex: 0 0 15vw;
+    height: 15vw;
   }
 
   .logo-image {
@@ -143,33 +143,33 @@
 
   /* Adjust scroll buttons */
   .scroll-button {
-    width: 40px;
-    height: 40px;
+    width: 6vw;
+    height: 6vw;
   }
 
   .scroll-button.left {
-    left: -30px;
+    left: -5vw;
   }
 
   .scroll-button.right {
-    right: -30px;
+    right: -5vw;
   }
 }
 
 /* Extra Small Screens */
 @media (max-width: 480px) {
   .company-logos-container {
-    border-radius: 80px;
-    padding: 20px 0;
+    border-radius: 8vw;
+    padding: 3vh 0;
   }
 
   .company-logos-title {
-    font-size: 1.5rem;
+    font-size: 3.5vw;
   }
 
   .logo-card {
-    flex: 0 0 80px;
-    height: 80px;
+    flex: 0 0 20vw;
+    height: 20vw;
   }
 
   .logo-image {

@@ -108,11 +108,12 @@
 }
 
 /* 🔥 Google Maps Link */
+/* 🔥 Google Maps Link - Centered */
 .map-link {
   position: absolute;
-  bottom: 160px;
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, -50%); /* Center horizontally and vertically */
   background: linear-gradient(45deg, #ff0000, #ff6666);
   color: white;
   font-size: 1.3rem;
@@ -129,8 +130,9 @@
 
 .map-link:hover {
   background: linear-gradient(45deg, #ff0000, #cc0000);
-  transform: translateX(-50%) scale(1.05);
+  transform: translate(-50%, -50%) scale(1.05);
 }
+
 
 /* 🔥 RESPONSIVE DESIGN */
 

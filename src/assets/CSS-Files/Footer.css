@@ -2,35 +2,36 @@
 .footer {
     background-color: #4c4b4b; /* Dark Background */
     color: #e2e2d5; /* Light Text */
-    padding: 30px 0;
+    padding: 3vw 0; /* Dynamic padding */
     font-family: 'Arial', sans-serif;
     width: 100%;
     position: relative;
-    margin-top: 30px;
+    margin-top: 3vh; /* Adjusted for better spacing */
 }
 
 /* 🔥 Footer Container */
 .footer-container {
     display: flex;
     justify-content: space-between;
-    max-width: 1200px;
+    max-width: 80vw; /* Responsive width */
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 2vw;
+    gap: 3vw; /* Adds spacing between sections */
 }
 
 /* 🔥 Footer Sections */
 .footer-section {
     flex: 1;
-    padding: 0 15px;
+    padding: 0 1vw;
 }
 
 /* 🔥 Section Titles */
 .footer-section h3 {
-    font-size: 1.6rem;
+    font-size: 2vw; /* Scales with screen width */
     font-weight: bold;
     color: #ffcc00; /* Bright orange for emphasis */
     text-transform: uppercase;
-    margin-bottom: 12px;
+    margin-bottom: 1.5vh;
 }
 
 /* 🔥 Footer Links & Text */
@@ -39,7 +40,7 @@
     color: #e2e2d5;
     text-decoration: none;
     transition: color 0.3s ease-in-out;
-    font-size: 0.9rem;
+    font-size: 1vw; /* Dynamic font size */
 }
 
 /* 🔥 Hover Effect */
@@ -51,11 +52,11 @@
 /* 🔥 Footer Bottom */
 .footer-bottom {
     text-align: center;
-    margin-top: 20px;
-    font-size: 0.9rem;
+    margin-top: 2vh;
+    font-size: 1vw;
     color: #bbb;
-    border-top: 1px solid #444;
-    padding-top: 10px;
+    border-top: 0.1vw solid #444;
+    padding-top: 1vh;
 }
 
 /* 🔥 Responsive Design */
@@ -63,8 +64,24 @@
 /* Tablet View */
 @media (max-width: 1024px) {
     .footer-container {
-        max-width: 100%;
-        padding: 0 15px;
+        max-width: 90vw;
+        padding: 0 3vw;
+        flex-wrap: wrap; /* Allows wrapping on smaller screens */
+        text-align: center;
+        gap: 2vh;
+    }
+
+    .footer-section h3 {
+        font-size: 2.2vw;
+    }
+
+    .footer-section p,
+    .footer-section a {
+        font-size: 1.2vw;
+    }
+
+    .footer-bottom {
+        font-size: 1.1vw;
     }
 }
 
@@ -76,30 +93,39 @@
     }
 
     .footer-section {
-        padding-bottom: 15px;
+        padding-bottom: 2vh;
     }
 
     .footer-section h3 {
-        font-size: 1.4rem;
+        font-size: 3.5vw;
+    }
+
+    .footer-section p,
+    .footer-section a {
+        font-size: 1.8vw;
+    }
+
+    .footer-bottom {
+        font-size: 1.5vw;
     }
 }
 
 /* Extra Small Screens */
 @media (max-width: 480px) {
     .footer {
-        padding: 20px 0;
+        padding: 4vw 0;
     }
 
     .footer-section h3 {
-        font-size: 1.3rem;
+        font-size: 4vw;
     }
 
     .footer-section p,
     .footer-section a {
-        font-size: 0.85rem;
+        font-size: 2.2vw;
     }
 
     .footer-bottom {
-        font-size: 0.8rem;
+        font-size: 2vw;
     }
 }
