@@ -5,7 +5,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
   padding: 5%;
   
 }
@@ -173,7 +173,7 @@
 
 /* Mission Section */
 .mission-container {
-  width: 100vw;
+  width: 99vw;
   text-align: center;
   padding: 10vh 5%;
   background: linear-gradient(to right, #000000, #7c7c76);
