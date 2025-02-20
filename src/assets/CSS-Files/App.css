@@ -8,17 +8,21 @@
   justify-content: center;
 }
 
-/* Logo Styling */
-.App-logo {
-  height: 30vmin; /* Adjusted for responsiveness */
-  max-width: 80%;
-  pointer-events: none;
+/* Container for main content */
+.App-content {
+  width: 90%; /* Adjust for responsiveness */
+  max-width: 1200px; /* Ensures a good width on larger screens */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Logo Styling */
+.App-logo {
+  height: 25vmin; /* Adjusted for responsiveness */
+  max-width: 100%;
+  pointer-events: none;
 }
 
 /* Header Styling */
@@ -37,13 +41,19 @@
 }
 
 /* Responsive Adjustments */
+@media (max-width: 1024px) {
+  .App-content {
+    width: 95%;
+  }
+}
+
 @media (max-width: 768px) {
   .App-header {
     font-size: calc(10px + 2vmin);
     padding: 15px;
   }
   .App-logo {
-    height: 25vmin;
+    height: 20vmin;
   }
 }
 
@@ -53,7 +63,11 @@
     padding: 10px;
   }
   .App-logo {
-    height: 20vmin;
+    height: 18vmin;
+  }
+  .App-content {
+    width: 100%;
+    padding: 10px;
   }
 }
 

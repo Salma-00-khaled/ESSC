@@ -5,7 +5,7 @@ import CountUp from 'react-countup';
 import { motion } from 'framer-motion';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import './assets/CSS-Files/Home.css';
 import Nav from './Nav';
 
@@ -18,6 +18,7 @@ const sections = [
 const Home = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -27,10 +28,14 @@ const Home = () => {
   }, []);
 
   useEffect(() => {
-    AOS.init({ duration: 1000 });
-  }, []);
+    AOS.init({
+      duration: 1000,
+      once: false, // Animations will trigger every time
+    });
 
-  
+    // Refresh AOS on route changes
+    AOS.refresh();
+  }, [location]);
 
   return (
     <section className="about-section" id="About">
@@ -44,14 +49,26 @@ const Home = () => {
         transition={{ duration: 1.5, ease: "easeOut" }}
       >
         <div className="hero-content">
+          {/* Unique Hero Title Animation */}
           <motion.h1
             key={currentIndex}
             className="hero-title"
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 1, ease: "easeOut" }}
+            initial={{ opacity: 0, x: -100 }} // Start off-screen to the left
+            animate={{ opacity: 1, x: 0 }} // Slide in to the center
+            transition={{ 
+              type: "spring", // Add a spring effect for bounce
+              stiffness: 100, // Control the stiffness of the spring
+              damping: 10, // Add some damping for a smoother bounce
+              delay: 0.2, // Delay the animation slightly
+            }}
+            whileHover={{ scale: 1.05, color: "#ffcc00" }} // Add hover effect
           >
-            <Typed strings={[sections[currentIndex].title]} typeSpeed={50} backSpeed={30} loop={false} />
+            <Typed
+              strings={[sections[currentIndex].title]}
+              typeSpeed={50}
+              backSpeed={30}
+              loop={false}
+            />
           </motion.h1>
           <motion.p
             className="hero-subtitle"
@@ -67,35 +84,53 @@ const Home = () => {
             ))}
           </div>
           <motion.div 
-        className="social-icons" 
-        initial={{ opacity: 0, y: 50 }} 
-        animate={{ opacity: 1, y: 0 }} 
-        transition={{ delay: 0.5, duration: 1 }}
-      >
-        {[{ icon: <FaFacebookF />, link: "https://www.facebook.com/profile.php?id=100077738543970" }, { icon: <FaWhatsapp />, link: "#" }, { icon: <FaEnvelope />, link: "mailto:egyptessc@gmail.com" }, { icon: <FaPhone />, link: "tel:#" }].map((social, index) => (
-          <motion.a key={index} href={social.link} target="_blank" rel="noopener noreferrer" whileHover={{ scale: 1.2 }}>
-            {social.icon}
-          </motion.a>
-        ))}
-      </motion.div>
+            className="social-icons" 
+            initial={{ opacity: 0, y: 50 }} 
+            animate={{ opacity: 1, y: 0 }} 
+            transition={{ delay: 0.5, duration: 1 }}
+          >
+            {[{ icon: <FaFacebookF />, link: "https://www.facebook.com/profile.php?id=100077738543970" }, { icon: <FaWhatsapp />, link: "#" }, { icon: <FaEnvelope />, link: "mailto:egyptessc@gmail.com" }, { icon: <FaPhone />, link: "tel:#" }].map((social, index) => (
+              <motion.a key={index} href={social.link} target="_blank" rel="noopener noreferrer" whileHover={{ scale: 1.2 }}>
+                {social.icon}
+              </motion.a>
+            ))}
+          </motion.div>
         </div>
       </motion.header>
 
       {/* Stats Section */}
-      <motion.div 
+      <motion.div
         className="stats-container"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.5, duration: 1.5 }}
+        data-aos="fade-up" // Add AOS animation
       >
-        {[{ label: 'Products', value: 23 }, { label: 'Years Of Experience', value: 12 }, { label: 'Employees', value: 74 }].map((stat, index) => (
-          <motion.div 
+        {[
+          { label: "Products", value: 23 },
+          { label: "Years Of Experience", value: 12 },
+          { label: "Employees", value: 74 },
+        ].map((stat, index) => (
+          <motion.div
             className="stat-box"
             key={index}
             whileHover={{ scale: 1.1 }}
             transition={{ duration: 0.3 }}
+            data-aos="zoom-in" // Add AOS animation
+            data-aos-delay={index * 200} // Stagger animations
+            onClick={() => {
+              if (stat.label === "Products") {
+                navigate("/Products"); // Navigate to Products page
+              }
+              else if (stat.label === "Years Of Experience") {
+                navigate("/Works"); // Navigate to Works page
+              }
+            }}
+            style={{ cursor: stat.label === "Products" || stat.label === "Years Of Experience" ? "pointer" : "default" }} // Change cursor for clickable items
           >
-            <h2><CountUp start={0} end={stat.value} duration={5} /></h2>
+            <h2>
+              <CountUp start={0} end={stat.value} duration={5} />
+            </h2>
             <p>{stat.label}</p>
           </motion.div>
         ))}
@@ -107,6 +142,7 @@ const Home = () => {
         initial={{ opacity: 0, x: -100 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 1.2, ease: "easeOut" }}
+        data-aos="fade-right" // Add AOS animation
       >
         <h1 className="about-title">ESSC Egypt</h1>
         <h3 className="about-subtitle">Your Safety is Our Priority</h3>
@@ -116,21 +152,9 @@ const Home = () => {
           <button className="black-btn" onClick={() => navigate('/Works')}>More About Company »</button>
         </motion.div>
       </motion.div>
-      <motion.div 
-        className="social-icons" 
-        initial={{ opacity: 0, y: 50 }} 
-        animate={{ opacity: 1, y: 0 }} 
-        transition={{ delay: 0.5, duration: 1 }}
-      >
-        {[{ icon: <FaFacebookF />, link: "https://www.facebook.com/profile.php?id=100077738543970" }, { icon: <FaWhatsapp />, link: "https://wa.me/your-number" }, { icon: <FaEnvelope />, link: "mailto:egyptessc@gmail.com" }, { icon: <FaPhone />, link: "tel:#" }].map((social, index) => (
-          <motion.a key={index} href={social.link} target="_blank" rel="noopener noreferrer" whileHover={{ scale: 1.2 }}>
-            {social.icon}
-          </motion.a>
-        ))}
-      </motion.div>
 
       {/* Mission Section */}
-      <div className="mission-container">
+      <div className="mission-container" data-aos="fade-up" data-aos-delay="200">
         <h1 className="mission-title">Our Mission</h1>
         <p className="mission-intro">We are committed to fulfilling our responsibilities towards all stakeholders...</p>
         <div className="mission-cards">
@@ -143,6 +167,8 @@ const Home = () => {
               className="mission-card" 
               key={index} 
               whileHover={{ rotateY: 20, scale: 1.05 }}
+              data-aos="fade-up" // Add AOS animation
+              data-aos-delay={index * 200} // Stagger animations
             >
               {item.icon}
               <h3>{item.title}</h3>
@@ -153,14 +179,14 @@ const Home = () => {
       </div>
 
       {/* Vision Section */}
-      <div className="vision-content">
+      <div className="vision-content" data-aos="fade-up" data-aos-delay="200">
         <h2 className="vision-title">
           <FaEye className="vision-icon" /> Our Vision
         </h2>
         <p className="vision-intro">
           ECCS has since its foundation proven its capabilities and competencies in a highly competitive business to achieve a recognizable market share as a modern company.
         </p>
-        <div className="vision-box">
+        <div className="vision-box" data-aos="zoom-in" data-aos-delay="300">
           <p>
             At ESSC, we believe that people's capabilities and passion for success are the most valuable assets ever. We built a team of ambitious partners who share our vision of being at the forefront of **environmental consulting services** and **firefighting systems installation and maintenance** across Egypt and the MENA region by **2025**.
           </p>
