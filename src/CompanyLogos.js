@@ -1,5 +1,5 @@
-import React, { useRef } from "react";
-import "./assets/CSS-Files/CompanyLogos.css"
+import React, { useRef, useEffect } from "react";
+import "./assets/CSS-Files/CompanyLogos.css";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa"; // Importing icons
 
 const companyLogos = [
@@ -23,18 +23,15 @@ const companyLogos = [
   require("./assets/logos/OIP (9).jpeg"),
   require("./assets/logos/OIP.jpeg"),
   require("./assets/logos/R.jpeg"),
-  
   require("./assets/logos/download (1).jpeg"),
   require("./assets/logos/download (2).jpeg"),
   require("./assets/logos/download.jpeg"),
-  
-  
-
 ];
 
 const CompanyLogos = ({ size = "medium" }) => {
   const scrollRef = useRef(null);
 
+  // Function to scroll logos
   const scroll = (direction) => {
     if (scrollRef.current) {
       const scrollAmount = 300; // Adjust scrolling amount
@@ -45,6 +42,24 @@ const CompanyLogos = ({ size = "medium" }) => {
       }
     }
   };
+
+  // Automatic scrolling effect
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (scrollRef.current) {
+        const { scrollLeft, scrollWidth, clientWidth } = scrollRef.current;
+
+        // If at the end, reset to the beginning
+        if (scrollLeft + clientWidth >= scrollWidth) {
+          scrollRef.current.scrollTo({ left: 0, behavior: "smooth" });
+        } else {
+          scroll("right"); // Scroll to the right
+        }
+      }
+    }, 3000); // Adjust the interval time (in milliseconds)
+
+    return () => clearInterval(interval); // Cleanup interval on unmount
+  }, []);
 
   return (
     <section className={`company-logos-container ${size}`}>

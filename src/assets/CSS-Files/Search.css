@@ -1,0 +1,52 @@
+/* Search.css */
+.search-container {
+    position: fixed; /* Keep it fixed at the top */
+    top: 100px; /* Distance from the top */
+    right: 20px; /* Distance from the right */
+    z-index: 1000; /* Ensure it's above other elements */
+  }
+  
+  .search-input-wrapper {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff; /* White background */
+    border-radius: 25px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 8px 16px;
+    transition: all 0.3s ease;
+    border: 2px solid #55190c; /* Blue border for contrast */
+  }
+  
+  .search-input-wrapper:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Larger shadow on hover */
+    border-color: #521604; 
+  }
+  
+  .search-icon {
+    color: #a20505; /* Red icon color */
+    margin-right: 10px;
+    font-size: 18px;
+  }
+  
+  .search-input {
+    border: none;
+    outline: none;
+    font-size: 16px;
+    width: 200px;
+    background: transparent;
+    transition: width 0.3s ease;
+  }
+  
+  .search-input:focus {
+    width: 250px; /* Expand input on focus */
+  }
+  
+  /* Optional: Add a placeholder animation */
+  .search-input::placeholder {
+    color: #aaa;
+    transition: color 0.3s ease;
+  }
+  
+  .search-input:focus::placeholder {
+    color: transparent; /* Hide placeholder on focus */
+  }
