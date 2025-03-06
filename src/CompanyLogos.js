@@ -56,7 +56,7 @@ const CompanyLogos = ({ size = "medium" }) => {
           scroll("right"); // Scroll to the right
         }
       }
-    }, 3000); // Adjust the interval time (in milliseconds)
+    }, 2000); // Adjust the interval time (in milliseconds)
 
     return () => clearInterval(interval); // Cleanup interval on unmount
   }, []);

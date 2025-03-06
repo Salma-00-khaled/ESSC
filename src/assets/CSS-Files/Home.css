@@ -190,7 +190,7 @@
 .mission-title {
   font-size: clamp(2rem, 5vw, 2.5rem); /* Responsive font size */
   font-weight: bold;
-  color:  #8a1111;
+  color: #b71c1c;
   text-transform: uppercase;
   margin-bottom: 15px;
 }
@@ -229,7 +229,7 @@
 
 .mission-icon {
   font-size: 2.5rem;
-  color:#8a1111;
+  color:#b71c1c;
   margin-bottom: 10px;
 }
 
