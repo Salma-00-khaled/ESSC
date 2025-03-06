@@ -41,6 +41,7 @@
   font-size: clamp(1.5rem, 5vw, 2.5rem); /* Responsive font size */
   padding: 25%;
   box-sizing: border-box;
+ margin-top: -5%;
 }
 .hero-title {
   color: #ffcc00;
@@ -189,7 +190,7 @@
 .mission-title {
   font-size: clamp(2rem, 5vw, 2.5rem); /* Responsive font size */
   font-weight: bold;
-  color: red;
+  color: #b71c1c;
   text-transform: uppercase;
   margin-bottom: 15px;
 }
@@ -228,7 +229,7 @@
 
 .mission-icon {
   font-size: 2.5rem;
-  color: red;
+  color:#b71c1c;
   margin-bottom: 10px;
 }
 
@@ -256,7 +257,7 @@
 .vision-title {
   font-size: clamp(2rem, 4vw, 2.8rem); /* Responsive font size */
   font-weight: bold;
-  color: red;
+  color:#8a1111;
   text-transform: uppercase;
   margin-bottom: 15px;
 }

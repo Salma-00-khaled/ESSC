@@ -1,18 +1,18 @@
-/* Default (medium) size */
+/* CompanyLogos.css */
 .company-logos-container {
   width: 100%;
   padding: 5vw 0;
-  background: linear-gradient(to right, #2c2b2b, #380101);
   margin-top: 5vh;
   text-align: center;
   position: relative;
   border-radius: 15vw;
+  overflow: hidden; /* Prevent vertical overflow */
 }
 
 .company-logos-title {
-  font-size: 2vw;
+  font-size: clamp(2rem, 4vw, 2.8rem); /* Responsive font size */
   font-weight: bold;
-  color: #ffffff;
+  color: #8a1111;
   margin-bottom: 2vh;
 }
 
@@ -40,7 +40,7 @@
 
 .logos-grid {
   display: flex;
-  gap:  2vw;
+  gap: 2vw;
   padding: 2vh;
 }
 
@@ -90,7 +90,7 @@
 }
 
 .scroll-button.left {
-  left:-4vw;
+  left: -4vw;
 }
 
 .scroll-button.right {
@@ -107,7 +107,7 @@
 
   .logo-card {
     flex: 0 0 120px;
-    height:12vw;
+    height: 12vw;
   }
 
   .company-logos-title {
@@ -118,7 +118,7 @@
 /* Mobile View */
 @media (max-width: 768px) {
   .company-logos-container {
-    border-radius:  10vw;
+    border-radius: 10vw;
     padding: 4vh 0;
   }
 
